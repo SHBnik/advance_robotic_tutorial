@@ -4,7 +4,7 @@ from geometry_msgs.msg import Twist
 
 def move():
     # Starts a new node
-    rospy.init_node('move_test', anonymous=True)
+    rospy.init_node('vector_controller', anonymous=True)
     velocity_publisher = rospy.Publisher('/vector/cmd_vel', Twist, queue_size=10)
     vel_msg = Twist()
 
