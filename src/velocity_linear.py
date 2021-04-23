@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy
 from geometry_msgs.msg import Twist
 
@@ -10,9 +10,9 @@ def move():
 
     #Receiveing the user's input
     print("Let's move your robot")
-    speed = input("Input your speed:")
-    distance = input("Type your distance:")
-    isForward = input("Foward?: ")#True or False
+    speed = int(input("Input your speed:"))
+    distance = int(input("Type your distance:"))
+    isForward = int(input("Foward?: ")) #True or False
 
     #Checking if the movement is forward or backwards
     if(isForward):

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy
 from geometry_msgs.msg import Twist
 PI = 3.1415926535897
@@ -11,9 +11,9 @@ def rotate():
 
     # Receiveing the user's input
     print("Let's rotate your robot")
-    speed = input("Input your speed (degrees/sec):")
-    angle = input("Type your distance (degrees):")
-    clockwise = input("Clockwise?: ") #True or false
+    speed = int(input("Input your speed (degrees/sec):"))
+    angle = int(input("Type your distance (degrees):"))
+    clockwise = int(input("Clockwise?: ")) #True or false
 
     #Converting from angles to radians
     angular_speed = speed*2*PI/360
